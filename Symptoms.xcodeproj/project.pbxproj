@@ -14,6 +14,13 @@
 		07E9E8A3295FF8B100029E2B /* SymptomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E8A2295FF8B100029E2B /* SymptomsTests.swift */; };
 		07E9E8AD295FF8B100029E2B /* SymptomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E8AC295FF8B100029E2B /* SymptomsUITests.swift */; };
 		07E9E8AF295FF8B100029E2B /* SymptomsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E8AE295FF8B100029E2B /* SymptomsUITestsLaunchTests.swift */; };
+		07E9E8F0295FFB9A00029E2B /* SymptomsWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E8EF295FFB9A00029E2B /* SymptomsWatchApp.swift */; };
+		07E9E8F2295FFB9A00029E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E8F1295FFB9A00029E2B /* ContentView.swift */; };
+		07E9E8F4295FFB9D00029E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E9E8F3295FFB9D00029E2B /* Assets.xcassets */; };
+		07E9E8F7295FFB9D00029E2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E9E8F6295FFB9D00029E2B /* Preview Assets.xcassets */; };
+		07E9E901295FFB9D00029E2B /* SymptomsWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E900295FFB9D00029E2B /* SymptomsWatch_Watch_AppTests.swift */; };
+		07E9E90B295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E90A295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITests.swift */; };
+		07E9E90D295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E90C295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +38,20 @@
 			remoteGlobalIDString = 07E9E88C295FF8AD00029E2B;
 			remoteInfo = Symptoms;
 		};
+		07E9E8FD295FFB9D00029E2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07E9E885295FF8AD00029E2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07E9E8EC295FFB9A00029E2B;
+			remoteInfo = "SymptomsWatch Watch App";
+		};
+		07E9E907295FFB9D00029E2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07E9E885295FF8AD00029E2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07E9E8EC295FFB9A00029E2B;
+			remoteInfo = "SymptomsWatch Watch App";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +66,16 @@
 		07E9E8A8295FF8B100029E2B /* SymptomsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymptomsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E9E8AC295FF8B100029E2B /* SymptomsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsUITests.swift; sourceTree = "<group>"; };
 		07E9E8AE295FF8B100029E2B /* SymptomsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07E9E8ED295FFB9A00029E2B /* SymptomsWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SymptomsWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E9E8EF295FFB9A00029E2B /* SymptomsWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp.swift; sourceTree = "<group>"; };
+		07E9E8F1295FFB9A00029E2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07E9E8F3295FFB9D00029E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07E9E8F6295FFB9D00029E2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07E9E8FC295FFB9D00029E2B /* SymptomsWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SymptomsWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E9E900295FFB9D00029E2B /* SymptomsWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
+		07E9E906295FFB9D00029E2B /* SymptomsWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SymptomsWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E9E90A295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		07E9E90C295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +100,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07E9E8EA295FFB9A00029E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9E8F9295FFB9D00029E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9E903295FFB9D00029E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +130,9 @@
 				07E9E88F295FF8AD00029E2B /* Symptoms */,
 				07E9E8A1295FF8B100029E2B /* SymptomsTests */,
 				07E9E8AB295FF8B100029E2B /* SymptomsUITests */,
+				07E9E8EE295FFB9A00029E2B /* SymptomsWatch Watch App */,
+				07E9E8FF295FFB9D00029E2B /* SymptomsWatch Watch AppTests */,
+				07E9E909295FFB9D00029E2B /* SymptomsWatch Watch AppUITests */,
 				07E9E88E295FF8AD00029E2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +143,9 @@
 				07E9E88D295FF8AD00029E2B /* Symptoms.app */,
 				07E9E89E295FF8B100029E2B /* SymptomsTests.xctest */,
 				07E9E8A8295FF8B100029E2B /* SymptomsUITests.xctest */,
+				07E9E8ED295FFB9A00029E2B /* SymptomsWatch Watch App.app */,
+				07E9E8FC295FFB9D00029E2B /* SymptomsWatch Watch AppTests.xctest */,
+				07E9E906295FFB9D00029E2B /* SymptomsWatch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +185,42 @@
 				07E9E8AE295FF8B100029E2B /* SymptomsUITestsLaunchTests.swift */,
 			);
 			path = SymptomsUITests;
+			sourceTree = "<group>";
+		};
+		07E9E8EE295FFB9A00029E2B /* SymptomsWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				07E9E8EF295FFB9A00029E2B /* SymptomsWatchApp.swift */,
+				07E9E8F1295FFB9A00029E2B /* ContentView.swift */,
+				07E9E8F3295FFB9D00029E2B /* Assets.xcassets */,
+				07E9E8F5295FFB9D00029E2B /* Preview Content */,
+			);
+			path = "SymptomsWatch Watch App";
+			sourceTree = "<group>";
+		};
+		07E9E8F5295FFB9D00029E2B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				07E9E8F6295FFB9D00029E2B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07E9E8FF295FFB9D00029E2B /* SymptomsWatch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				07E9E900295FFB9D00029E2B /* SymptomsWatch_Watch_AppTests.swift */,
+			);
+			path = "SymptomsWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		07E9E909295FFB9D00029E2B /* SymptomsWatch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				07E9E90A295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITests.swift */,
+				07E9E90C295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "SymptomsWatch Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +279,59 @@
 			productReference = 07E9E8A8295FF8B100029E2B /* SymptomsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		07E9E8EC295FFB9A00029E2B /* SymptomsWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E9E90E295FFB9D00029E2B /* Build configuration list for PBXNativeTarget "SymptomsWatch Watch App" */;
+			buildPhases = (
+				07E9E8E9295FFB9A00029E2B /* Sources */,
+				07E9E8EA295FFB9A00029E2B /* Frameworks */,
+				07E9E8EB295FFB9A00029E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SymptomsWatch Watch App";
+			productName = "SymptomsWatch Watch App";
+			productReference = 07E9E8ED295FFB9A00029E2B /* SymptomsWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07E9E8FB295FFB9D00029E2B /* SymptomsWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E9E911295FFB9D00029E2B /* Build configuration list for PBXNativeTarget "SymptomsWatch Watch AppTests" */;
+			buildPhases = (
+				07E9E8F8295FFB9D00029E2B /* Sources */,
+				07E9E8F9295FFB9D00029E2B /* Frameworks */,
+				07E9E8FA295FFB9D00029E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07E9E8FE295FFB9D00029E2B /* PBXTargetDependency */,
+			);
+			name = "SymptomsWatch Watch AppTests";
+			productName = "SymptomsWatch Watch AppTests";
+			productReference = 07E9E8FC295FFB9D00029E2B /* SymptomsWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07E9E905295FFB9D00029E2B /* SymptomsWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E9E914295FFB9D00029E2B /* Build configuration list for PBXNativeTarget "SymptomsWatch Watch AppUITests" */;
+			buildPhases = (
+				07E9E902295FFB9D00029E2B /* Sources */,
+				07E9E903295FFB9D00029E2B /* Frameworks */,
+				07E9E904295FFB9D00029E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07E9E908295FFB9D00029E2B /* PBXTargetDependency */,
+			);
+			name = "SymptomsWatch Watch AppUITests";
+			productName = "SymptomsWatch Watch AppUITests";
+			productReference = 07E9E906295FFB9D00029E2B /* SymptomsWatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +353,17 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 07E9E88C295FF8AD00029E2B;
 					};
+					07E9E8EC295FFB9A00029E2B = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					07E9E8FB295FFB9D00029E2B = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 07E9E8EC295FFB9A00029E2B;
+					};
+					07E9E905295FFB9D00029E2B = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 07E9E8EC295FFB9A00029E2B;
+					};
 				};
 			};
 			buildConfigurationList = 07E9E888295FF8AD00029E2B /* Build configuration list for PBXProject "Symptoms" */;
@@ -224,6 +382,9 @@
 				07E9E88C295FF8AD00029E2B /* Symptoms */,
 				07E9E89D295FF8B100029E2B /* SymptomsTests */,
 				07E9E8A7295FF8B100029E2B /* SymptomsUITests */,
+				07E9E8EC295FFB9A00029E2B /* SymptomsWatch Watch App */,
+				07E9E8FB295FFB9D00029E2B /* SymptomsWatch Watch AppTests */,
+				07E9E905295FFB9D00029E2B /* SymptomsWatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +407,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		07E9E8A6295FF8B100029E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9E8EB295FFB9A00029E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E9E8F7295FFB9D00029E2B /* Preview Assets.xcassets in Resources */,
+				07E9E8F4295FFB9D00029E2B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9E8FA295FFB9D00029E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9E904295FFB9D00029E2B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,6 +465,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07E9E8E9295FFB9A00029E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E9E8F2295FFB9A00029E2B /* ContentView.swift in Sources */,
+				07E9E8F0295FFB9A00029E2B /* SymptomsWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9E8F8295FFB9D00029E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E9E901295FFB9D00029E2B /* SymptomsWatch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9E902295FFB9D00029E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E9E90D295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
+				07E9E90B295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +503,16 @@
 			isa = PBXTargetDependency;
 			target = 07E9E88C295FF8AD00029E2B /* Symptoms */;
 			targetProxy = 07E9E8A9295FF8B100029E2B /* PBXContainerItemProxy */;
+		};
+		07E9E8FE295FFB9D00029E2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07E9E8EC295FFB9A00029E2B /* SymptomsWatch Watch App */;
+			targetProxy = 07E9E8FD295FFB9D00029E2B /* PBXContainerItemProxy */;
+		};
+		07E9E908295FFB9D00029E2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07E9E8EC295FFB9A00029E2B /* SymptomsWatch Watch App */;
+			targetProxy = 07E9E907295FFB9D00029E2B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -572,6 +792,151 @@
 			};
 			name = Release;
 		};
+		07E9E90F295FFB9D00029E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SymptomsWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = M3YE8Y5432;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SymptomsWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		07E9E910295FFB9D00029E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SymptomsWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = M3YE8Y5432;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SymptomsWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		07E9E912295FFB9D00029E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3YE8Y5432;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.dermot.SymptomsWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymptomsWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SymptomsWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		07E9E913295FFB9D00029E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3YE8Y5432;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.dermot.SymptomsWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymptomsWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SymptomsWatch Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		07E9E915295FFB9D00029E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3YE8Y5432;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.dermot.SymptomsWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SymptomsWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		07E9E916295FFB9D00029E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3YE8Y5432;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.dermot.SymptomsWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SymptomsWatch Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,6 +972,33 @@
 			buildConfigurations = (
 				07E9E8B9295FF8B100029E2B /* Debug */,
 				07E9E8BA295FF8B100029E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07E9E90E295FFB9D00029E2B /* Build configuration list for PBXNativeTarget "SymptomsWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E9E90F295FFB9D00029E2B /* Debug */,
+				07E9E910295FFB9D00029E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07E9E911295FFB9D00029E2B /* Build configuration list for PBXNativeTarget "SymptomsWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E9E912295FFB9D00029E2B /* Debug */,
+				07E9E913295FFB9D00029E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07E9E914295FFB9D00029E2B /* Build configuration list for PBXNativeTarget "SymptomsWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E9E915295FFB9D00029E2B /* Debug */,
+				07E9E916295FFB9D00029E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

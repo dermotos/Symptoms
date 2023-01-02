@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0736EE682962965900ABDE8F /* HealthStore in Frameworks */ = {isa = PBXBuildFile; productRef = 0736EE672962965900ABDE8F /* HealthStore */; };
+		0736EE6A2962966D00ABDE8F /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 0736EE692962966D00ABDE8F /* CocoaLumberjack */; };
+		0736EE6C2962966D00ABDE8F /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0736EE6B2962966D00ABDE8F /* CocoaLumberjackSwift */; };
 		07E9E891295FF8AD00029E2B /* SymptomsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E890295FF8AD00029E2B /* SymptomsApp.swift */; };
 		07E9E893295FF8AD00029E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E892295FF8AD00029E2B /* ContentView.swift */; };
 		07E9E895295FF8B100029E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E9E894295FF8B100029E2B /* Assets.xcassets */; };
@@ -25,6 +28,7 @@
 		07E9E919295FFBFC00029E2B /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E917295FFBFC00029E2B /* HealthStore.swift */; };
 		07E9E91F296270F900029E2B /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E91E296270F900029E2B /* CocoaLumberjack */; };
 		07E9E921296270F900029E2B /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E920296270F900029E2B /* CocoaLumberjackSwift */; };
+		07E9E925296276DA00029E2B /* HealthStore in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E924296276DA00029E2B /* HealthStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0736EE652962961900ABDE8F /* HealthStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HealthStore; path = ../HealthStore; sourceTree = "<group>"; };
 		07E9E88D295FF8AD00029E2B /* Symptoms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symptoms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E9E890295FF8AD00029E2B /* SymptomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsApp.swift; sourceTree = "<group>"; };
 		07E9E892295FF8AD00029E2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E9E925296276DA00029E2B /* HealthStore in Frameworks */,
 				07E9E921296270F900029E2B /* CocoaLumberjackSwift in Frameworks */,
 				07E9E91F296270F900029E2B /* CocoaLumberjack in Frameworks */,
 			);
@@ -113,6 +119,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0736EE6A2962966D00ABDE8F /* CocoaLumberjack in Frameworks */,
+				0736EE682962965900ABDE8F /* HealthStore in Frameworks */,
+				0736EE6C2962966D00ABDE8F /* CocoaLumberjackSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,9 +142,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0736EE662962964E00ABDE8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		07E9E884295FF8AD00029E2B = {
 			isa = PBXGroup;
 			children = (
+				0736EE652962961900ABDE8F /* HealthStore */,
 				07E9E88F295FF8AD00029E2B /* Symptoms */,
 				07E9E8A1295FF8B100029E2B /* SymptomsTests */,
 				07E9E8AB295FF8B100029E2B /* SymptomsUITests */,
@@ -143,6 +160,7 @@
 				07E9E8FF295FFB9D00029E2B /* SymptomsWatch Watch AppTests */,
 				07E9E909295FFB9D00029E2B /* SymptomsWatch Watch AppUITests */,
 				07E9E88E295FF8AD00029E2B /* Products */,
+				0736EE662962964E00ABDE8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +280,7 @@
 			packageProductDependencies = (
 				07E9E91E296270F900029E2B /* CocoaLumberjack */,
 				07E9E920296270F900029E2B /* CocoaLumberjackSwift */,
+				07E9E924296276DA00029E2B /* HealthStore */,
 			);
 			productName = Symptoms;
 			productReference = 07E9E88D295FF8AD00029E2B /* Symptoms.app */;
@@ -316,6 +335,11 @@
 			dependencies = (
 			);
 			name = "SymptomsWatch Watch App";
+			packageProductDependencies = (
+				0736EE672962965900ABDE8F /* HealthStore */,
+				0736EE692962966D00ABDE8F /* CocoaLumberjack */,
+				0736EE6B2962966D00ABDE8F /* CocoaLumberjackSwift */,
+			);
 			productName = "SymptomsWatch Watch App";
 			productReference = 07E9E8ED295FFB9A00029E2B /* SymptomsWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -401,6 +425,7 @@
 			mainGroup = 07E9E884295FF8AD00029E2B;
 			packageReferences = (
 				07E9E91D296270F900029E2B /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				07E9E923296276DA00029E2B /* XCRemoteSwiftPackageReference "HealthStore" */,
 			);
 			productRefGroup = 07E9E88E295FF8AD00029E2B /* Products */;
 			projectDirPath = "";
@@ -679,7 +704,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -718,7 +743,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -1047,9 +1072,31 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		07E9E923296276DA00029E2B /* XCRemoteSwiftPackageReference "HealthStore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dermotos/HealthStore";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0736EE672962965900ABDE8F /* HealthStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HealthStore;
+		};
+		0736EE692962966D00ABDE8F /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E9E91D296270F900029E2B /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		0736EE6B2962966D00ABDE8F /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E9E91D296270F900029E2B /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
 		07E9E91E296270F900029E2B /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 07E9E91D296270F900029E2B /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
@@ -1059,6 +1106,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 07E9E91D296270F900029E2B /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
+		};
+		07E9E924296276DA00029E2B /* HealthStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E9E923296276DA00029E2B /* XCRemoteSwiftPackageReference "HealthStore" */;
+			productName = HealthStore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

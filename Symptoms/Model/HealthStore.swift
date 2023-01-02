@@ -12,7 +12,7 @@ protocol HealthStore {
     
     var isAvailable: Bool { get }
     
-    func authorizationStatus(forWriting types: Set<HKCategoryType>) async throws -> HKAuthorizationStatus
+    func authorizationStatus(forWriting type: HKCategoryType) -> HKAuthorizationStatus
     
     func requestAuthorization(for readWrite: Set<HKCategoryType>, readOnly: Set<HKCategoryType>) async throws -> String?
     
@@ -28,6 +28,7 @@ extension HKHealthStore: HealthStore {
         } catch {
             
         }
+        return "fixme"
     }
     
     func authorizationStatus(forWriting type: HKCategoryType) -> HKAuthorizationStatus {
@@ -39,7 +40,7 @@ extension HKHealthStore: HealthStore {
     }
     
     func recordSample(_ sample: HKCategoryValueSeverity, _ category: HKCategoryTypeIdentifier, date: Date, duration: TimeInterval) {
-        <#code#>
+        
     }
     
     
@@ -65,13 +66,13 @@ final class HealthKitService {
         
     }
     
-    func writeValues() {
-        let identifier = HKCategoryTypeIdentifier.headache
-       // let category = HKCategoryType(identifier)
-        let severity: HKCategoryValueSeverity = .severe
-        //HKCategoryValueSeverity
-        
-        let sample = HKCategoryValueSeverity.
-        let sample = HKCategorySample(type:identifier , value: <#T##Int#>, start: <#T##Date#>, end: <#T##Date#>)
-    }
+//    func writeValues() {
+//        let identifier = HKCategoryTypeIdentifier.headache
+//       // let category = HKCategoryType(identifier)
+//        let severity: HKCategoryValueSeverity = .severe
+//        //HKCategoryValueSeverity
+//        
+//        let sample = HKCategoryValueSeverity.
+//        let sample = HKCategorySample(type:identifier , value: <#T##Int#>, start: <#T##Date#>, end: <#T##Date#>)
+//    }
 }

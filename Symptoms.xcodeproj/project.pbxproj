@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070804842963EEF400C08891 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070804832963EEF400C08891 /* Symptom.swift */; };
+		070804852963EEF400C08891 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070804832963EEF400C08891 /* Symptom.swift */; };
+		071BA7632963F2FA00F59BC0 /* SymptomRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BA7622963F2FA00F59BC0 /* SymptomRow.swift */; };
 		0736EE682962965900ABDE8F /* HealthStore in Frameworks */ = {isa = PBXBuildFile; productRef = 0736EE672962965900ABDE8F /* HealthStore */; };
 		0736EE6A2962966D00ABDE8F /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 0736EE692962966D00ABDE8F /* CocoaLumberjack */; };
 		0736EE6C2962966D00ABDE8F /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0736EE6B2962966D00ABDE8F /* CocoaLumberjackSwift */; };
@@ -61,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070804832963EEF400C08891 /* Symptom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptom.swift; sourceTree = "<group>"; };
+		071BA7622963F2FA00F59BC0 /* SymptomRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomRow.swift; sourceTree = "<group>"; };
 		0736EE652962961900ABDE8F /* HealthStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HealthStore; path = ../HealthStore; sourceTree = "<group>"; };
 		07E9E88D295FF8AD00029E2B /* Symptoms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symptoms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E9E890295FF8AD00029E2B /* SymptomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsApp.swift; sourceTree = "<group>"; };
@@ -139,6 +144,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070804862963F10600C08891 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				071BA7622963F2FA00F59BC0 /* SymptomRow.swift */,
+			);
+			name = Views;
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0736EE662962964E00ABDE8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +194,7 @@
 				07E9E91C29600B4100029E2B /* Info.plist */,
 				07E9E890295FF8AD00029E2B /* SymptomsApp.swift */,
 				07E9E892295FF8AD00029E2B /* ContentView.swift */,
+				070804862963F10600C08891 /* Views */,
 				07E9E91A295FFC0100029E2B /* Model */,
 				07E9E894295FF8B100029E2B /* Assets.xcassets */,
 				07E9E896295FF8B100029E2B /* Symptoms.entitlements */,
@@ -253,6 +268,7 @@
 		07E9E91A295FFC0100029E2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				070804832963EEF400C08891 /* Symptom.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -491,7 +507,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071BA7632963F2FA00F59BC0 /* SymptomRow.swift in Sources */,
 				07E9E893295FF8AD00029E2B /* ContentView.swift in Sources */,
+				070804842963EEF400C08891 /* Symptom.swift in Sources */,
 				07E9E891295FF8AD00029E2B /* SymptomsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E9E8F2295FFB9A00029E2B /* ContentView.swift in Sources */,
+				070804852963EEF400C08891 /* Symptom.swift in Sources */,
 				07E9E8F0295FFB9A00029E2B /* SymptomsWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

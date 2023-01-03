@@ -11,7 +11,7 @@ import SwiftUI
 struct SymptomsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(trackedSymptoms: Symptoms.previewData)
         }
     }
 }

@@ -24,8 +24,6 @@
 		07E9E901295FFB9D00029E2B /* SymptomsWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E900295FFB9D00029E2B /* SymptomsWatch_Watch_AppTests.swift */; };
 		07E9E90B295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E90A295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITests.swift */; };
 		07E9E90D295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E90C295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITestsLaunchTests.swift */; };
-		07E9E918295FFBFC00029E2B /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E917295FFBFC00029E2B /* HealthStore.swift */; };
-		07E9E919295FFBFC00029E2B /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E917295FFBFC00029E2B /* HealthStore.swift */; };
 		07E9E91F296270F900029E2B /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E91E296270F900029E2B /* CocoaLumberjack */; };
 		07E9E921296270F900029E2B /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E920296270F900029E2B /* CocoaLumberjackSwift */; };
 		07E9E925296276DA00029E2B /* HealthStore in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E924296276DA00029E2B /* HealthStore */; };
@@ -85,7 +83,6 @@
 		07E9E906295FFB9D00029E2B /* SymptomsWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SymptomsWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E9E90A295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		07E9E90C295FFB9D00029E2B /* SymptomsWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		07E9E917295FFBFC00029E2B /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		07E9E91B295FFE9200029E2B /* SymptomsWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SymptomsWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		07E9E91C29600B4100029E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -256,7 +253,6 @@
 		07E9E91A295FFC0100029E2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				07E9E917295FFBFC00029E2B /* HealthStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -497,7 +493,6 @@
 			files = (
 				07E9E893295FF8AD00029E2B /* ContentView.swift in Sources */,
 				07E9E891295FF8AD00029E2B /* SymptomsApp.swift in Sources */,
-				07E9E918295FFBFC00029E2B /* HealthStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +519,6 @@
 			files = (
 				07E9E8F2295FFB9A00029E2B /* ContentView.swift in Sources */,
 				07E9E8F0295FFB9A00029E2B /* SymptomsWatchApp.swift in Sources */,
-				07E9E919295FFBFC00029E2B /* HealthStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

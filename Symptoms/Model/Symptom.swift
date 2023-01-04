@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct Symptom: Identifiable {
-    var id: Int
+struct Symptom: Hashable {
     var name: String
 }
 
@@ -16,7 +15,7 @@ typealias Symptoms = [Symptom]
 
 extension Symptoms {
     static let previewData : Symptoms = {
-        [Symptom(id: 0, name: "Headache"),
-         Symptom(id: 1, name: "Heartburn")]
+        [Symptom(name: "Headache"),
+         Symptom(name: "Heartburn")]
     }()
 }

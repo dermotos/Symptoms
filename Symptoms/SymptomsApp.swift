@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct SymptomsApp: App {
+    @StateObject var viewModel = ViewModel()
+    
+    init() {
+        self.viewModel = ViewModel(sessionSymptoms: SessionSymptoms())
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView(trackedSymptoms: Symptoms.previewData)
         }
     }
+    
+    
 }

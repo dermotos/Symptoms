@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    var trackedSymptoms: [Symptom]
-    
+    @EnvironmentObject var model: ViewModel
+
     var body: some View {
         NavigationView {
-            List(trackedSymptoms) { symptom in
+            List(model.trackedSymptoms) { symptom in
                 SymptomRow(symptom: symptom)
             }
             .navigationTitle("Tracked Symptoms")
@@ -23,6 +22,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(trackedSymptoms: Symptoms.previewData)
+        ContentView()
+            .environmentObject(ViewModel.previewData)
     }
 }

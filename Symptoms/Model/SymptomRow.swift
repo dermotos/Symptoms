@@ -16,7 +16,7 @@ struct SymptomRow: View {
             Image(systemName: "staroflife.circle.fill")
             
             Text(symptom.name)
-            Divider()
+            Spacer()
         }
     }
 }

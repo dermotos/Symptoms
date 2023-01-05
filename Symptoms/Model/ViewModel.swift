@@ -8,28 +8,42 @@
 import Foundation
 import HealthStore
 
-typealias SessionSymptoms = [Symptom: Int?]
+typealias SymptomRecords = [Symptom: Int?]
 
-class ViewModel: ObservableObject {
-    @Published var sessionSymptoms: SessionSymptoms
+final class ViewModel: ObservableObject {
+    @Published var trackedSymptoms: Symptoms
+    @Published var records: SymptomRecords
     
-    init(sessionSymptoms: SessionSymptoms) {
-        self.sessionSymptoms = sessionSymptoms
+    fileprivate init(trackedSymptoms: Symptoms, records: SymptomRecords) {
+        self.trackedSymptoms = trackedSymptoms
+        self.records = records
+        
     }
     
-    init() {
-        var configuration: ConfigurationData
-        Task {
-            let configurationManager = ConfigurationManager()
-            guard let config = await configurationManager.load() else {
-                fatalError()
-            }
-            configuration = configuration
+    init(configuration: ConfigurationData) {
+        var records = SymptomRecords()
+        var trackedSymptomTypes = Symptoms()
+        for (index, element) in configuration.trackedSymptoms.enumerated() {
+            let symptom = Symptom(id: index, name: element)
+            records[symptom] = nil
+            trackedSymptomTypes.append(symptom)
         }
-        self.sessionSymptoms = configuration.trackedSymptoms.reduce(into: [Symptom: Int?]()) {
-            $0[Symptom(name: $1)] = nil
-        }
-
+        
+        self.records = records
+        self.trackedSymptoms = trackedSymptomTypes
     }
     
+    func save() {
+        fatalError("Not implemented yet")
+    }
+}
+
+extension ViewModel: Previewable {
+    static var previewData: ViewModel {
+        let symptoms = Symptoms.previewData
+        let records = symptoms.reduce(into: SymptomRecords()) {
+            $0[$1] = nil
+        }
+        return ViewModel(trackedSymptoms: symptoms, records: records)
+    }
 }

@@ -6,18 +6,16 @@
 //
 
 import SwiftUI
+import HealthStore
 
 @main
 struct SymptomsApp: App {
-    @StateObject var viewModel = ViewModel()
-    
-    init() {
-        self.viewModel = ViewModel(sessionSymptoms: SessionSymptoms())
-    }
+    @StateObject var viewModel = ViewModel(configuration: ConfigurationManager.load())
     
     var body: some Scene {
         WindowGroup {
-            ContentView(trackedSymptoms: Symptoms.previewData)
+            ContentView()
+                .environmentObject(viewModel)
         }
     }
     

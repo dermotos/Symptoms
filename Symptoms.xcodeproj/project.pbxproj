@@ -20,6 +20,9 @@
 		072996452966763C0072BBF7 /* SymptomsUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072996442966763C0072BBF7 /* SymptomsUIKitUITestsLaunchTests.swift */; };
 		0729965129667D570072BBF7 /* SymptomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729965029667D570072BBF7 /* SymptomListViewController.swift */; };
 		0729965429667D710072BBF7 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729965329667D710072BBF7 /* RootCoordinator.swift */; };
+		07299656296699880072BBF7 /* SampleEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07299655296699880072BBF7 /* SampleEntryViewController.swift */; };
+		072996582967A9570072BBF7 /* DateBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072996572967A9570072BBF7 /* DateBarView.swift */; };
+		0729965C2967B2920072BBF7 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729965B2967B2920072BBF7 /* LayoutHelper.swift */; };
 		07A9D58129664EF100E5B03F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58029664EF000E5B03F /* TestView.swift */; };
 		07A9D58B29666D5500E5B03F /* SymptomsWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58A29666D5500E5B03F /* SymptomsWatchAppApp.swift */; };
 		07A9D58D29666D5500E5B03F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58C29666D5500E5B03F /* ContentView.swift */; };
@@ -126,6 +129,9 @@
 		072996442966763C0072BBF7 /* SymptomsUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0729965029667D570072BBF7 /* SymptomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomListViewController.swift; sourceTree = "<group>"; };
 		0729965329667D710072BBF7 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		07299655296699880072BBF7 /* SampleEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEntryViewController.swift; sourceTree = "<group>"; };
+		072996572967A9570072BBF7 /* DateBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBarView.swift; sourceTree = "<group>"; };
+		0729965B2967B2920072BBF7 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		0736EE652962961900ABDE8F /* HealthStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HealthStore; path = ../HealthStore; sourceTree = "<group>"; };
 		07A9D58029664EF000E5B03F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		07A9D58829666D5500E5B03F /* SymptomsWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SymptomsWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +256,8 @@
 				0729962A2966763B0072BBF7 /* Assets.xcassets */,
 				0729962C2966763B0072BBF7 /* LaunchScreen.storyboard */,
 				0729962F2966763B0072BBF7 /* Info.plist */,
+				0729965A2967B1E20072BBF7 /* Helpers */,
+				072996592967B1D70072BBF7 /* Views */,
 			);
 			path = SymptomsUIKit;
 			sourceTree = "<group>";
@@ -275,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				0729965029667D570072BBF7 /* SymptomListViewController.swift */,
+				07299655296699880072BBF7 /* SampleEntryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -285,6 +294,22 @@
 				0729965329667D710072BBF7 /* RootCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		072996592967B1D70072BBF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				072996572967A9570072BBF7 /* DateBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0729965A2967B1E20072BBF7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0729965B2967B2920072BBF7 /* LayoutHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		0736EE662962964E00ABDE8F /* Frameworks */ = {
@@ -779,6 +804,9 @@
 				0729965129667D570072BBF7 /* SymptomListViewController.swift in Sources */,
 				0729965429667D710072BBF7 /* RootCoordinator.swift in Sources */,
 				07299624296676390072BBF7 /* SceneDelegate.swift in Sources */,
+				072996582967A9570072BBF7 /* DateBarView.swift in Sources */,
+				07299656296699880072BBF7 /* SampleEntryViewController.swift in Sources */,
+				0729965C2967B2920072BBF7 /* LayoutHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

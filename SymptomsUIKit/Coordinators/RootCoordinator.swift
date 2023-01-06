@@ -8,6 +8,16 @@
 import Foundation
 import UIKit
 
+enum Screen {
+    case root
+    case sampleEntry
+}
+
+protocol Navigator {
+
+    func moveTo(_ screen: Screen, animated: Bool)
+}
+
 final class RootCoordinator {
     
     var navigationController: UINavigationController?
@@ -19,4 +29,19 @@ final class RootCoordinator {
         return navController
         
     }
+}
+
+extension RootCoordinator: Navigator {
+    
+    func moveTo(_ screen: Screen, animated: Bool = true) {
+        switch screen {
+        case .root:
+            navigationController?.popViewController(animated: animated)
+
+        case .sampleEntry:
+            fatalError()
+//            navigationController?.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        }
+    }
+
 }

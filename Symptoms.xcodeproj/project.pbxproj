@@ -132,6 +132,7 @@
 		07299655296699880072BBF7 /* SampleEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEntryViewController.swift; sourceTree = "<group>"; };
 		072996572967A9570072BBF7 /* DateBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBarView.swift; sourceTree = "<group>"; };
 		0729965B2967B2920072BBF7 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
+		0729965D2967B8070072BBF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0736EE652962961900ABDE8F /* HealthStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HealthStore; path = ../HealthStore; sourceTree = "<group>"; };
 		07A9D58029664EF000E5B03F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		07A9D58829666D5500E5B03F /* SymptomsWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SymptomsWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +252,7 @@
 			children = (
 				0729965229667D620072BBF7 /* Coordinators */,
 				07299621296676390072BBF7 /* AppDelegate.swift */,
-				0729964F29667CD90072BBF7 /* ViewControllers */,
+				0729964F29667CD90072BBF7 /* ViewControllers (Code based) */,
 				07299623296676390072BBF7 /* SceneDelegate.swift */,
 				0729962A2966763B0072BBF7 /* Assets.xcassets */,
 				0729962C2966763B0072BBF7 /* LaunchScreen.storyboard */,
@@ -279,13 +280,13 @@
 			path = SymptomsUIKitUITests;
 			sourceTree = "<group>";
 		};
-		0729964F29667CD90072BBF7 /* ViewControllers */ = {
+		0729964F29667CD90072BBF7 /* ViewControllers (Code based) */ = {
 			isa = PBXGroup;
 			children = (
 				0729965029667D570072BBF7 /* SymptomListViewController.swift */,
 				07299655296699880072BBF7 /* SampleEntryViewController.swift */,
 			);
-			path = ViewControllers;
+			path = "ViewControllers (Code based)";
 			sourceTree = "<group>";
 		};
 		0729965229667D620072BBF7 /* Coordinators */ = {
@@ -358,6 +359,7 @@
 		07E9E884295FF8AD00029E2B = {
 			isa = PBXGroup;
 			children = (
+				0729965D2967B8070072BBF7 /* README.md */,
 				0736EE652962961900ABDE8F /* HealthStore */,
 				07E9E88F295FF8AD00029E2B /* Symptoms */,
 				07E9E8A1295FF8B100029E2B /* SymptomsTests */,

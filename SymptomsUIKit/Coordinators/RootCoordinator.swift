@@ -23,7 +23,7 @@ final class RootCoordinator {
     var navigationController: UINavigationController?
     
     func start() -> UINavigationController {
-        let listViewController = SymptomListViewController()
+        let listViewController = SymptomListViewController(coordinator: self)
         let navController = UINavigationController(rootViewController: listViewController)
         self.navigationController = navController
         return navController

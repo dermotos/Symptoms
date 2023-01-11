@@ -15,7 +15,9 @@ class SymptomListViewController: UIViewController {
     }
     
     private weak var coordinator: RootCoordinator?
-    private var trackedSymptomModel: TrackedSymptomViewModel
+    private var model: TrackedSymptomViewModel
+    
+    private var addSymptomBarButton: UIBarButtonItem
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
@@ -25,10 +27,21 @@ class SymptomListViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var emptyHelpView: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.preferredFont(forTextStyle: .callout)
+        label.adjustsFontForContentSizeCategory = true
+        label.textAlignment = .center
+        label.textColor = UIColor.secondaryLabel
+        label.numberOfLines = 0
+        label.text = "Tap the '+' button to add your first tracked symptom."
+        return label
+    }()
+    
     init(coordinator: RootCoordinator, healthStore: HealthStorable, configStore: ConfigurationStorable) {
         self.coordinator = coordinator
-        self.trackedSymptomModel = TrackedSymptomViewModel(healthStore: healthStore, configStore: configStore)
-        
+        self.model = TrackedSymptomViewModel(healthStore: healthStore, configStore: configStore)
+        self.addSymptomBarButton = UIBarButtonItem()
         super.init(nibName: nil, bundle: nil)
         
     }
@@ -42,19 +55,48 @@ class SymptomListViewController: UIViewController {
         setupView()
     }
     
+    private func addAppropriateContentView() {
+        if model.trackedSymptoms.count == 0 {
+            tableView.removeFromSuperview()
+            view.addSubview(emptyHelpView)
+            emptyHelpView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                emptyHelpView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 44),
+                emptyHelpView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                emptyHelpView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -18)
+            ])
+        } else {
+            emptyHelpView.removeFromSuperview()
+            view.fit(subView: tableView)
+        }
+    }
+    
     private func setupView() {
         view.backgroundColor = .systemBackground
-        view.fit(subView: tableView)
+        addAppropriateContentView()
+        self.title = "Tracked Symptoms"
+        self.addSymptomBarButton.target = self
+        self.addSymptomBarButton.action = #selector(didTapAddTrackedSymptomButton)
+        self.addSymptomBarButton.image = UIImage(systemName: "plus")
+        self.navigationItem.rightBarButtonItem = self.addSymptomBarButton
+    }
+    
+    @objc
+    private func didTapAddTrackedSymptomButton() {
+        coordinator?.navigateTo(.addTrackedSymptoms(model))
     }
 }
 
 extension SymptomListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        model.trackedSymptoms.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReuseIdentifier, for: indexPath)
+        let symptom = model.trackedSymptoms[indexPath.row]
+        cell.textLabel?.text = symptom.name
+        return cell
     }
     
     

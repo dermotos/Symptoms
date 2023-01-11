@@ -12,7 +12,7 @@ import HealthStore
 enum Screen {
     case root
     case sampleEntry
-    case addTrackedSymptoms
+    case addTrackedSymptoms(TrackedSymptomViewModel)
 }
 
 protocol Navigator {
@@ -54,10 +54,9 @@ extension RootCoordinator: Navigator {
         case .sampleEntry:
             fatalError()
 
-        case .addTrackedSymptoms:
-            fatalError()
-//            let addTrackedSymptomViewController = AddSymptomViewController(coordinator: self, healthStore: healthStore, trackedSymptoms: <#T##[HKCategoryTypeIdentifier]#>)
-//            navigationController?.present
+        case .addTrackedSymptoms(let model):
+            let addTrackedSymptoms = AddSymptomViewController(coordinator: self, model: model)
+            navigationController?.topViewController?.present(addTrackedSymptoms, animated: true)
         }
     }
 

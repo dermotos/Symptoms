@@ -25,6 +25,7 @@ class TrackedSymptomViewModel {
         self.trackedSymptoms = self.configStore.load().trackedSymptoms.map {
             Symptom(id: $0, name: $0.rawValue)
         }
+       // self.trackedSymptoms = supportedSymptoms
     }
     
     func save(forwardToCounterpart: Bool = true) -> Bool {

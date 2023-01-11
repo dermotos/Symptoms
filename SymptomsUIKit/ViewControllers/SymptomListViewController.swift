@@ -129,7 +129,7 @@ extension SymptomListViewController: UITableViewDataSource {
 
 extension SymptomListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.navigateTo(.sampleEntry)
+        coordinator?.navigateTo(.sampleEntry(indexPath.row))
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {

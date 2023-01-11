@@ -12,18 +12,19 @@ struct TestView: View {
     @State private var path: [Color] = []
     
     var body: some View {
-        NavigationStack(path: $path) {
-            List {
-                NavigationLink("Purple", value: .purple)
-                NavigationLink("Pink", value: .pink)
-                NavigationLink("Orange", value: .orange)
-            }
-            .navigationDestination(for: Color.self) { color in
-                Text("Test")
-                    .foregroundColor(color)
-            }
-            
-        }
+        Spacer()
+//        NavigationStack(path: $path) {
+//            List {
+//                NavigationLink("Purple", value: .purple)
+//                NavigationLink("Pink", value: .pink)
+//                NavigationLink("Orange", value: .orange)
+//            }
+//            .navigationDestination(for: Color.self) { color in
+//                Text("Test")
+//                    .foregroundColor(color)
+//            }
+//            
+//        }
     }
 }
 

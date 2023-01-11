@@ -10,7 +10,7 @@ import HealthStore
 
 @main
 struct SymptomsApp: App {
-    @StateObject var viewModel = ViewModel(configuration: ConfigurationStore.load())
+    @StateObject var viewModel = ViewModel(configuration: ConfigurationStore(filename: "tracked-symptoms.json").load())
     
     var body: some Scene {
         WindowGroup {
@@ -18,6 +18,5 @@ struct SymptomsApp: App {
                 .environmentObject(viewModel)
         }
     }
-    
-    
+
 }

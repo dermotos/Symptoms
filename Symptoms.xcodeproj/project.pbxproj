@@ -38,6 +38,9 @@
 		07A9D5A829666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D5A729666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift */; };
 		07A9D5AB29666D5900E5B03F /* SymptomsWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07A9D58829666D5500E5B03F /* SymptomsWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07A9D5B629666DB400E5B03F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58029664EF000E5B03F /* TestView.swift */; };
+		07B16B3C296E7C110091E9B3 /* SymptomIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B16B3B296E7C110091E9B3 /* SymptomIndicatorView.swift */; };
+		07B16B3E296E7C770091E9B3 /* SymptomIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B16B3D296E7C770091E9B3 /* SymptomIndicatorViewController.swift */; };
+		07B16B41296E7DA50091E9B3 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B16B40296E7DA50091E9B3 /* Dot.swift */; };
 		07DDF830296E30D000E82765 /* TrackedSymptomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DDF82F296E30D000E82765 /* TrackedSymptomViewModel.swift */; };
 		07E9E891295FF8AD00029E2B /* SymptomsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E890295FF8AD00029E2B /* SymptomsApp.swift */; };
 		07E9E893295FF8AD00029E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E892295FF8AD00029E2B /* ContentView.swift */; };
@@ -153,6 +156,9 @@
 		07A9D5A529666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		07A9D5A729666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		07B16B3A296E77F30091E9B3 /* SymptomsUIKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SymptomsUIKit.entitlements; sourceTree = "<group>"; };
+		07B16B3B296E7C110091E9B3 /* SymptomIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomIndicatorView.swift; sourceTree = "<group>"; };
+		07B16B3D296E7C770091E9B3 /* SymptomIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomIndicatorViewController.swift; sourceTree = "<group>"; };
+		07B16B40296E7DA50091E9B3 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		07DDF82F296E30D000E82765 /* TrackedSymptomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedSymptomViewModel.swift; sourceTree = "<group>"; };
 		07E9E88D295FF8AD00029E2B /* Symptoms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symptoms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E9E890295FF8AD00029E2B /* SymptomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsApp.swift; sourceTree = "<group>"; };
@@ -264,13 +270,13 @@
 				07DDF82E296E30BE00E82765 /* Model */,
 				0729965229667D620072BBF7 /* Coordinators */,
 				07299621296676390072BBF7 /* AppDelegate.swift */,
-				0729964F29667CD90072BBF7 /* ViewControllers (Code based) */,
+				0729965A2967B1E20072BBF7 /* Helpers */,
+				072996592967B1D70072BBF7 /* Views */,
+				0729964F29667CD90072BBF7 /* ViewControllers */,
 				07299623296676390072BBF7 /* SceneDelegate.swift */,
 				0729962A2966763B0072BBF7 /* Assets.xcassets */,
 				0729962C2966763B0072BBF7 /* LaunchScreen.storyboard */,
 				0729962F2966763B0072BBF7 /* Info.plist */,
-				0729965A2967B1E20072BBF7 /* Helpers */,
-				072996592967B1D70072BBF7 /* Views */,
 			);
 			path = SymptomsUIKit;
 			sourceTree = "<group>";
@@ -292,14 +298,14 @@
 			path = SymptomsUIKitUITests;
 			sourceTree = "<group>";
 		};
-		0729964F29667CD90072BBF7 /* ViewControllers (Code based) */ = {
+		0729964F29667CD90072BBF7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				0729965029667D570072BBF7 /* SymptomListViewController.swift */,
 				07299655296699880072BBF7 /* SampleEntryViewController.swift */,
 				0729965E2967C69E0072BBF7 /* AddSymptomViewController.swift */,
 			);
-			path = "ViewControllers (Code based)";
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		0729965229667D620072BBF7 /* Coordinators */ = {
@@ -314,6 +320,8 @@
 			isa = PBXGroup;
 			children = (
 				072996572967A9570072BBF7 /* DateBarView.swift */,
+				07B16B3B296E7C110091E9B3 /* SymptomIndicatorView.swift */,
+				07B16B3D296E7C770091E9B3 /* SymptomIndicatorViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,6 +377,14 @@
 			path = "SymptomsWatchApp Watch AppUITests";
 			sourceTree = "<group>";
 		};
+		07B16B3F296E7D7C0091E9B3 /* SymptomIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				07B16B40296E7DA50091E9B3 /* Dot.swift */,
+			);
+			path = SymptomIndicator;
+			sourceTree = "<group>";
+		};
 		07DDF82E296E30BE00E82765 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +438,7 @@
 				07E9E890295FF8AD00029E2B /* SymptomsApp.swift */,
 				07E9E892295FF8AD00029E2B /* ContentView.swift */,
 				071BA766296516AF00F59BC0 /* Previewable.swift */,
+				07B16B3F296E7D7C0091E9B3 /* SymptomIndicator */,
 				070804862963F10600C08891 /* Views */,
 				07E9E91A295FFC0100029E2B /* Model */,
 				07E9E894295FF8B100029E2B /* Assets.xcassets */,
@@ -827,12 +844,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				072996622967CA510072BBF7 /* Previewable.swift in Sources */,
+				07B16B3C296E7C110091E9B3 /* SymptomIndicatorView.swift in Sources */,
 				07299622296676390072BBF7 /* AppDelegate.swift in Sources */,
 				072996602967CA260072BBF7 /* ViewModel.swift in Sources */,
 				07DDF830296E30D000E82765 /* TrackedSymptomViewModel.swift in Sources */,
 				0729965129667D570072BBF7 /* SymptomListViewController.swift in Sources */,
 				072996612967CA260072BBF7 /* Symptom.swift in Sources */,
 				0729965F2967C69E0072BBF7 /* AddSymptomViewController.swift in Sources */,
+				07B16B3E296E7C770091E9B3 /* SymptomIndicatorViewController.swift in Sources */,
 				0729965429667D710072BBF7 /* RootCoordinator.swift in Sources */,
 				07299624296676390072BBF7 /* SceneDelegate.swift in Sources */,
 				072996582967A9570072BBF7 /* DateBarView.swift in Sources */,
@@ -892,6 +911,7 @@
 				07A9D58129664EF100E5B03F /* TestView.swift in Sources */,
 				071BA7652963F85E00F59BC0 /* ViewModel.swift in Sources */,
 				071BA7632963F2FA00F59BC0 /* SymptomRow.swift in Sources */,
+				07B16B41296E7DA50091E9B3 /* Dot.swift in Sources */,
 				071BA767296516AF00F59BC0 /* Previewable.swift in Sources */,
 				07E9E893295FF8AD00029E2B /* ContentView.swift in Sources */,
 				070804842963EEF400C08891 /* Symptom.swift in Sources */,

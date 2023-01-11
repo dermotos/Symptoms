@@ -36,12 +36,22 @@ class SampleEntryViewController: UIViewController {
         return button
     }()
     
+    init(startingIndex: Int) {
+        print("Todo: Set the page view to index \(startingIndex)")
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
     func setupView() {
+        view.backgroundColor = UIColor.systemBackground
         view.addSubview(dateBarView)
         view.addSubview(pagerView)
         view.addSubview(buttonBarView)

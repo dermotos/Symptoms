@@ -11,7 +11,7 @@ import HealthStore
 
 enum Screen {
     case root
-    case sampleEntry
+    case sampleEntry(Int)
     case addTrackedSymptoms(TrackedSymptomViewModel)
 }
 
@@ -59,8 +59,10 @@ extension RootCoordinator: Navigator {
             navigationController?.presentedViewController?.dismiss(animated: animated)
             navigationController?.popViewController(animated: animated)
 
-        case .sampleEntry:
-            fatalError()
+        case .sampleEntry(let index):
+            navigationController?.presentedViewController?.dismiss(animated: animated)
+            let sampleEntryViewController = SampleEntryViewController(startingIndex: index)
+            navigationController?.pushViewController(sampleEntryViewController, animated: true)
 
         case .addTrackedSymptoms(let model):
             let addTrackedSymptoms = AddSymptomViewController(coordinator: self, model: model)

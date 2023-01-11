@@ -37,10 +37,16 @@ final class RootCoordinator {
         SymptomListViewController(coordinator: self,
                                   healthStore: healthStore,
                                   configStore: configStore)
-        let navController = UINavigationController(rootViewController: listViewController)
-        self.navigationController = navController
-        return navController
         
+        let navigationController = makeRootNavigationController(containing: listViewController)
+        self.navigationController = navigationController
+        return navigationController
+    }
+    
+    private func makeRootNavigationController(containing rootViewController: UIViewController) -> UINavigationController {
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.prefersLargeTitles = true
+        return navigationController
     }
 }
 
@@ -67,5 +73,4 @@ extension RootCoordinator: Navigator {
         let symptomListViewController = navigationController?.viewControllers.first as? SymptomListViewController
         symptomListViewController?.refreshTable()
     }
-
 }

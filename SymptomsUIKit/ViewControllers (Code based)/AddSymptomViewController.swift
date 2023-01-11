@@ -77,8 +77,6 @@ extension AddSymptomViewController: UITableViewDataSource {
         cell.textLabel?.text = symptom.name
         return cell
     }
-    
-    
 }
 
 extension AddSymptomViewController: UITableViewDelegate {

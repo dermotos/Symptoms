@@ -152,6 +152,7 @@
 		07A9D5A129666D5800E5B03F /* SymptomsWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SymptomsWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9D5A529666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		07A9D5A729666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07B16B3A296E77F30091E9B3 /* SymptomsUIKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SymptomsUIKit.entitlements; sourceTree = "<group>"; };
 		07DDF82F296E30D000E82765 /* TrackedSymptomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedSymptomViewModel.swift; sourceTree = "<group>"; };
 		07E9E88D295FF8AD00029E2B /* Symptoms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symptoms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E9E890295FF8AD00029E2B /* SymptomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsApp.swift; sourceTree = "<group>"; };
@@ -259,6 +260,7 @@
 		07299620296676390072BBF7 /* SymptomsUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				07B16B3A296E77F30091E9B3 /* SymptomsUIKit.entitlements */,
 				07DDF82E296E30BE00E82765 /* Model */,
 				0729965229667D620072BBF7 /* Coordinators */,
 				07299621296676390072BBF7 /* AppDelegate.swift */,
@@ -971,6 +973,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SymptomsUIKit/SymptomsUIKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M3YE8Y5432;
@@ -1000,6 +1003,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SymptomsUIKit/SymptomsUIKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M3YE8Y5432;

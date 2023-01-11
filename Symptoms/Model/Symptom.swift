@@ -14,6 +14,12 @@ struct Symptom: Hashable, Identifiable {
     var name: String
 }
 
+extension Symptom: Equatable {
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
 typealias Symptoms = [Symptom]
 
 extension Symptoms: Previewable {
@@ -22,3 +28,5 @@ extension Symptoms: Previewable {
          Symptom(id: .heartburn, name: "Heartburn")]
     }()
 }
+
+

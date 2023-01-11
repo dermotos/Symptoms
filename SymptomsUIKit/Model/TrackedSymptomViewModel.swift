@@ -28,6 +28,7 @@ class TrackedSymptomViewModel {
        // self.trackedSymptoms = supportedSymptoms
     }
     
+    @discardableResult
     func save(forwardToCounterpart: Bool = true) -> Bool {
         let configurationData = ConfigurationData(trackedSymptoms: trackedSymptoms.map { $0.id })
         do {

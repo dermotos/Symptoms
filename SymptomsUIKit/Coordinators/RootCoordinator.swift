@@ -49,6 +49,8 @@ extension RootCoordinator: Navigator {
     func navigateTo(_ screen: Screen, animated: Bool = true) {
         switch screen {
         case .root:
+            refreshSymptomList()
+            navigationController?.presentedViewController?.dismiss(animated: animated)
             navigationController?.popViewController(animated: animated)
 
         case .sampleEntry:
@@ -56,8 +58,14 @@ extension RootCoordinator: Navigator {
 
         case .addTrackedSymptoms(let model):
             let addTrackedSymptoms = AddSymptomViewController(coordinator: self, model: model)
-            navigationController?.topViewController?.present(addTrackedSymptoms, animated: true)
+            let containingController = UINavigationController(rootViewController: addTrackedSymptoms)
+            navigationController?.present(containingController, animated: true)
         }
+    }
+    
+    private func refreshSymptomList() {
+        let symptomListViewController = navigationController?.viewControllers.first as? SymptomListViewController
+        symptomListViewController?.refreshTable()
     }
 
 }

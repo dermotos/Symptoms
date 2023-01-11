@@ -55,6 +55,13 @@ class SymptomListViewController: UIViewController {
         setupView()
     }
     
+    func refreshTable() {
+        addAppropriateContentView()
+        if tableView.superview != nil {
+            tableView.reloadSections(IndexSet(integer: .zero), with: .automatic)
+        }
+    }
+    
     private func addAppropriateContentView() {
         if model.trackedSymptoms.count == 0 {
             tableView.removeFromSuperview()

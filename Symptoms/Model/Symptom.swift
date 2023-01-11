@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import HealthKit
+import SwiftUI
 
 struct Symptom: Hashable, Identifiable {
-    var id: Int
+    var id: HKCategoryTypeIdentifier
     var name: String
 }
 
@@ -16,7 +18,7 @@ typealias Symptoms = [Symptom]
 
 extension Symptoms: Previewable {
     static let previewData: Symptoms = {
-        [Symptom(id: 0, name: "Headache"),
-         Symptom(id: 1, name: "Heartburn")]
+        [Symptom(id: .headache, name: "Headache"),
+         Symptom(id: .heartburn, name: "Heartburn")]
     }()
 }

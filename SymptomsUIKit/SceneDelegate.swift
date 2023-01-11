@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import HealthStore
+import HealthKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
+    private enum Constants {
+        static let filename: String = "tracked-symptoms.json"
+    }
 
     var window: UIWindow?
 
-    var rootCoordinator = RootCoordinator()
+    var rootCoordinator = RootCoordinator(healthStore: HKHealthStore(), configStore: ConfigurationStore(filename: Constants.filename))
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         

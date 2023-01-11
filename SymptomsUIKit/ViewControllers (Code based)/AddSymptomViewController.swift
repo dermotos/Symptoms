@@ -1,21 +1,31 @@
 //
-//  SymptomListViewController.swift
+//  AddSymptomViewController.swift
 //  SymptomsUIKit
 //
-//  Created by Dermot O'Sullivan on 5/1/2023.
+//  Created by Dermot O'Sullivan on 6/1/2023.
 //
 
 import UIKit
+import HealthKit
 import HealthStore
 
-class SymptomListViewController: UIViewController {
+//class AddSymptomViewModel {
+//    var symptomTypes: [HKCategoryTypeIdentifier: Bool]
+//
+//    init(availableSymptoms: [HKCategoryTypeIdentifier], selectedSymptoms: [HKCategoryTypeIdentifier]) {
+//        symptomTypes = availableSymptoms.reduce(into: [HKCategoryTypeIdentifier: Bool]) {
+//            $0.
+//    }
+//}
+
+class AddSymptomViewController: UIViewController {
     
     private enum Constants {
         static let cellReuseIdentifier = "cell"
     }
     
     private weak var coordinator: RootCoordinator?
-    private var trackedSymptomModel: TrackedSymptomViewModel
+    private weak var model: TrackedSymptomViewModel?
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
@@ -25,10 +35,10 @@ class SymptomListViewController: UIViewController {
         return tableView
     }()
     
-    init(coordinator: RootCoordinator, healthStore: HealthStorable, configStore: ConfigurationStorable) {
+    init(coordinator: RootCoordinator, model: TrackedSymptomViewModel) {
         self.coordinator = coordinator
-        self.trackedSymptomModel = TrackedSymptomViewModel(healthStore: healthStore, configStore: configStore)
-        
+        self.model = model
+       
         super.init(nibName: nil, bundle: nil)
         
     }
@@ -48,7 +58,7 @@ class SymptomListViewController: UIViewController {
     }
 }
 
-extension SymptomListViewController: UITableViewDataSource {
+extension AddSymptomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         5
     }
@@ -60,8 +70,8 @@ extension SymptomListViewController: UITableViewDataSource {
     
 }
 
-extension SymptomListViewController: UITableViewDelegate {
+extension AddSymptomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.navigateTo(.sampleEntry)
+        
     }
 }

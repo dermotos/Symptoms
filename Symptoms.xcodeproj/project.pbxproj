@@ -23,6 +23,11 @@
 		07299656296699880072BBF7 /* SampleEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07299655296699880072BBF7 /* SampleEntryViewController.swift */; };
 		072996582967A9570072BBF7 /* DateBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072996572967A9570072BBF7 /* DateBarView.swift */; };
 		0729965C2967B2920072BBF7 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729965B2967B2920072BBF7 /* LayoutHelper.swift */; };
+		0729965F2967C69E0072BBF7 /* AddSymptomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729965E2967C69E0072BBF7 /* AddSymptomViewController.swift */; };
+		072996602967CA260072BBF7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BA7642963F85E00F59BC0 /* ViewModel.swift */; };
+		072996612967CA260072BBF7 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070804832963EEF400C08891 /* Symptom.swift */; };
+		072996622967CA510072BBF7 /* Previewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BA766296516AF00F59BC0 /* Previewable.swift */; };
+		072996642967CA770072BBF7 /* HealthStore in Frameworks */ = {isa = PBXBuildFile; productRef = 072996632967CA770072BBF7 /* HealthStore */; };
 		07A9D58129664EF100E5B03F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58029664EF000E5B03F /* TestView.swift */; };
 		07A9D58B29666D5500E5B03F /* SymptomsWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58A29666D5500E5B03F /* SymptomsWatchAppApp.swift */; };
 		07A9D58D29666D5500E5B03F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58C29666D5500E5B03F /* ContentView.swift */; };
@@ -33,6 +38,7 @@
 		07A9D5A829666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D5A729666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift */; };
 		07A9D5AB29666D5900E5B03F /* SymptomsWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07A9D58829666D5500E5B03F /* SymptomsWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07A9D5B629666DB400E5B03F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58029664EF000E5B03F /* TestView.swift */; };
+		07DDF830296E30D000E82765 /* TrackedSymptomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DDF82F296E30D000E82765 /* TrackedSymptomViewModel.swift */; };
 		07E9E891295FF8AD00029E2B /* SymptomsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E890295FF8AD00029E2B /* SymptomsApp.swift */; };
 		07E9E893295FF8AD00029E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E892295FF8AD00029E2B /* ContentView.swift */; };
 		07E9E895295FF8B100029E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E9E894295FF8B100029E2B /* Assets.xcassets */; };
@@ -133,6 +139,7 @@
 		072996572967A9570072BBF7 /* DateBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBarView.swift; sourceTree = "<group>"; };
 		0729965B2967B2920072BBF7 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		0729965D2967B8070072BBF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0729965E2967C69E0072BBF7 /* AddSymptomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSymptomViewController.swift; sourceTree = "<group>"; };
 		0736EE652962961900ABDE8F /* HealthStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HealthStore; path = ../HealthStore; sourceTree = "<group>"; };
 		07A9D58029664EF000E5B03F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		07A9D58829666D5500E5B03F /* SymptomsWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SymptomsWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +152,7 @@
 		07A9D5A129666D5800E5B03F /* SymptomsWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SymptomsWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9D5A529666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		07A9D5A729666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07DDF82F296E30D000E82765 /* TrackedSymptomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedSymptomViewModel.swift; sourceTree = "<group>"; };
 		07E9E88D295FF8AD00029E2B /* Symptoms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symptoms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E9E890295FF8AD00029E2B /* SymptomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsApp.swift; sourceTree = "<group>"; };
 		07E9E892295FF8AD00029E2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072996642967CA770072BBF7 /* HealthStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +259,7 @@
 		07299620296676390072BBF7 /* SymptomsUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				07DDF82E296E30BE00E82765 /* Model */,
 				0729965229667D620072BBF7 /* Coordinators */,
 				07299621296676390072BBF7 /* AppDelegate.swift */,
 				0729964F29667CD90072BBF7 /* ViewControllers (Code based) */,
@@ -285,6 +295,7 @@
 			children = (
 				0729965029667D570072BBF7 /* SymptomListViewController.swift */,
 				07299655296699880072BBF7 /* SampleEntryViewController.swift */,
+				0729965E2967C69E0072BBF7 /* AddSymptomViewController.swift */,
 			);
 			path = "ViewControllers (Code based)";
 			sourceTree = "<group>";
@@ -354,6 +365,14 @@
 				07A9D5A729666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "SymptomsWatchApp Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		07DDF82E296E30BE00E82765 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07DDF82F296E30D000E82765 /* TrackedSymptomViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		07E9E884295FF8AD00029E2B = {
@@ -497,6 +516,9 @@
 			dependencies = (
 			);
 			name = SymptomsUIKit;
+			packageProductDependencies = (
+				072996632967CA770072BBF7 /* HealthStore */,
+			);
 			productName = SymptomsUIKit;
 			productReference = 0729961F296676390072BBF7 /* SymptomsUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -802,8 +824,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072996622967CA510072BBF7 /* Previewable.swift in Sources */,
 				07299622296676390072BBF7 /* AppDelegate.swift in Sources */,
+				072996602967CA260072BBF7 /* ViewModel.swift in Sources */,
+				07DDF830296E30D000E82765 /* TrackedSymptomViewModel.swift in Sources */,
 				0729965129667D570072BBF7 /* SymptomListViewController.swift in Sources */,
+				072996612967CA260072BBF7 /* Symptom.swift in Sources */,
+				0729965F2967C69E0072BBF7 /* AddSymptomViewController.swift in Sources */,
 				0729965429667D710072BBF7 /* RootCoordinator.swift in Sources */,
 				07299624296676390072BBF7 /* SceneDelegate.swift in Sources */,
 				072996582967A9570072BBF7 /* DateBarView.swift in Sources */,
@@ -1621,6 +1648,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		072996632967CA770072BBF7 /* HealthStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HealthStore;
+		};
 		07E9E91E296270F900029E2B /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 07E9E91D296270F900029E2B /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;

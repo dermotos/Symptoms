@@ -10,7 +10,7 @@ import HealthStore
 
 @main
 struct SymptomsApp: App {
-    @StateObject var viewModel = ViewModel(configuration: ConfigurationManager.load())
+    @StateObject var viewModel = ViewModel(configuration: ConfigurationStore.load())
     
     var body: some Scene {
         WindowGroup {

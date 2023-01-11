@@ -23,8 +23,8 @@ final class ViewModel: ObservableObject {
     init(configuration: ConfigurationData) {
         var records = SymptomRecords()
         var trackedSymptomTypes = Symptoms()
-        for (index, element) in configuration.trackedSymptoms.enumerated() {
-            let symptom = Symptom(id: index, name: element)
+        for (_, element) in configuration.trackedSymptoms.enumerated() {
+            let symptom = Symptom(id: element, name: element.rawValue)
             records[symptom] = nil
             trackedSymptomTypes.append(symptom)
         }

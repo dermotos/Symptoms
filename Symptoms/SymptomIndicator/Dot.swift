@@ -24,30 +24,29 @@ struct Spike: View {
     let endPoint = UnitPoint(x: 0.5, y: 0.6)
 
     var body: some View {
-        VStack {
-            GeometryReader { geometry in
-                Path { path in
-                    let reference = min(geometry.size.width, geometry.size.height)
-                    let width = reference
-                    let height = reference * 0.75
-                    let middle = reference * 0.5
-                    
-                    path.addLines([
-                        CGPoint(x: 0 , y: height), // bottom left
-                        CGPoint(x: middle, y: 0), // middle top
-                        CGPoint(x: width, y: height), // bottom right
-                        CGPoint(x: 0 , y: height) // Back to bottom left
-                    ])
-                    
-                }
-                .fill(.linearGradient(colors: [gradientStart, gradientEnd], startPoint: startPoint, endPoint: endPoint))
+        GeometryReader { geometry in
+            Path { path in
+                let reference = min(geometry.size.width, geometry.size.height)
+                let width = reference
+                let height = reference * 0.75
+                let middle = reference * 0.5
+                
+                path.addLines([
+                    CGPoint(x: 0 , y: height), // bottom left
+                    CGPoint(x: middle, y: 0), // middle top
+                    CGPoint(x: width, y: height), // bottom right
+                    CGPoint(x: 0 , y: height) // Back to bottom left
+                ])
+                
             }
+            .fill(.red)
         }
+        
     }
 }
 
 struct Dot: View {
-    @State var level: SymptomLevel
+    var level: SymptomLevel
     
     var color: Color {
         level == .notPresent ? .gray : .red
@@ -64,13 +63,12 @@ struct Dot: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
-            Circle()
-                .foregroundColor(color)
-                .scaleEffect(sizeStep)
-                .animation(.easeInOut, value: level)
+        Circle()
+            .foregroundColor(color)
+            .scaleEffect(sizeStep)
+            .animation(.easeInOut, value: level)
         }
-    }
+    
 }
 
 
@@ -85,11 +83,12 @@ struct RotatedSpike: View {
 
 struct SymptomIndicator: View {
     @State var level: SymptomLevel
+   // @State var sliderLevel: Double
     
     var sizeStep: CGFloat {
         let scaleForLevel: [SymptomLevel: CGFloat] =
-        [.notPresent: 0.1,
-         .present: 0.15,
+        [.notPresent: 0.01,
+         .present: 0.01,
          .mild: 0.3,
          .moderate: 0.5,
          .severe: 0.6]
@@ -103,9 +102,9 @@ struct SymptomIndicator: View {
                 .mild:
             return 5
         case .moderate:
-            return 7
+            return 9
         case .severe:
-            return 10
+            return 15
         }
     }
     
@@ -116,21 +115,22 @@ struct SymptomIndicator: View {
     }
     
     var body: some View {
-        ZStack {
-            spikes
-                .scaleEffect(1.0, anchor: .center)
-                .scaledToFit()
-                .border(Color.green, width: 1)
-                .scaleEffect(sizeStep)
-                
-            Dot(level: level)
-                //.scaledToFit()
-                .border(Color.red, width: 1)
-                .opacity(0.2)
-            }
+        VStack {
+            ZStack {
+                spikes
+                    .scaledToFit()
+                    .scaleEffect(sizeStep)
+                    
+                Dot(level: level)
+                    .scaledToFit()
+                }
+            .animation(.spring(), value: level)
             
-        
-        
+//            Slider( value: $sliderLevel, in: 0...5) { change in
+//                level = SymptomLevel(rawValue: Int(sliderLevel))!
+//            }
+        }
+       
     }
     
 }
@@ -138,9 +138,6 @@ struct SymptomIndicator: View {
 struct Dot_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            Dot(level: .present)
-            Spike().previewDisplayName("Spike")
-            RotatedSpike(angle: Angle(degrees: 15)).previewDisplayName("Rotated")
             SymptomIndicator(level: .severe).previewDisplayName("Indicator")
         }
         

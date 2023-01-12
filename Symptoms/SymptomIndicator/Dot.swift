@@ -7,13 +7,22 @@
 
 import SwiftUI
 
+enum SymptomLevel: Int {
+    case notPresent = 0
+    case present
+    case mild
+    case moderate
+    case severe
+}
+
 struct Spike: View {
+    
     var fillStyle = FillStyle()
     let gradientStart = Color("spikeGradientStart")
     let gradientEnd = Color("spikeGradientEnd")
     let startPoint = UnitPoint(x: 0.5, y: 0)
     let endPoint = UnitPoint(x: 0.5, y: 0.6)
-    
+
     var body: some View {
         VStack {
             GeometryReader { geometry in
@@ -38,41 +47,32 @@ struct Spike: View {
 }
 
 struct Dot: View {
-    @State var level: Int = 4
-    @State var sliderValue: CGFloat = 4
+    @State var level: SymptomLevel
     
     var color: Color {
-        level == 0 ? .gray : .red
+        level == .notPresent ? .gray : .red
     }
     
     var sizeStep: CGFloat {
-        let scaleForLevel: [Int: CGFloat] =
-        [0: 0.1,
-         1: 0.15,
-         2: 0.3,
-         3: 0.5,
-         4: 0.6]
+        let scaleForLevel: [SymptomLevel: CGFloat] =
+        [.notPresent: 0.1,
+         .present: 0.15,
+         .mild: 0.3,
+         .moderate: 0.5,
+         .severe: 0.6]
         return scaleForLevel[level, default: 0.3]
     }
     
     var body: some View {
-        VStack {
-            GeometryReader { geometry in
-                Circle()
-                    .foregroundColor(color)
-                    .scaleEffect(sizeStep)
-                    .animation(.easeInOut, value: level)
-            }
-            Slider(
-                    value: $sliderValue,
-                    in: 0...4,
-                    step: 1) { _ in
-                        level = Int(sliderValue)
-                    }
+        GeometryReader { geometry in
+            Circle()
+                .foregroundColor(color)
+                .scaleEffect(sizeStep)
+                .animation(.easeInOut, value: level)
         }
-       
     }
 }
+
 
 struct RotatedSpike: View {
     let angle: Angle
@@ -84,25 +84,53 @@ struct RotatedSpike: View {
 }
 
 struct SymptomIndicator: View {
-    @State var level: Int
+    @State var level: SymptomLevel
+    
+    var sizeStep: CGFloat {
+        let scaleForLevel: [SymptomLevel: CGFloat] =
+        [.notPresent: 0.1,
+         .present: 0.15,
+         .mild: 0.3,
+         .moderate: 0.5,
+         .severe: 0.6]
+        return scaleForLevel[level, default: 0.3]
+    }
+    
+    func numberOfSpikes() -> Int {
+        switch level {
+        case .notPresent,
+                .present,
+                .mild:
+            return 5
+        case .moderate:
+            return 7
+        case .severe:
+            return 10
+        }
+    }
     
     var spikes: some View {
-        ForEach(0..<8) { index in
-            RotatedSpike(angle: .degrees(Double(index) / Double(8) * 360.0))
+        ForEach(0..<numberOfSpikes(), id: \.self) { index in
+            RotatedSpike(angle: .degrees(Double(index) / Double(numberOfSpikes()) * 360.0))
         }
     }
     
     var body: some View {
         ZStack {
-            GeometryReader { geometry in
-                spikes
-                    .scaleEffect(0.25, anchor: .center)
-                    .position(CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2))
-                Dot()
-                    .position(CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2))
+            spikes
+                .scaleEffect(1.0, anchor: .center)
+                .scaledToFit()
+                .border(Color.green, width: 1)
+                .scaleEffect(sizeStep)
+                
+            Dot(level: level)
+                //.scaledToFit()
+                .border(Color.red, width: 1)
+                .opacity(0.2)
             }
             
-        }
+        
+        
     }
     
 }
@@ -110,10 +138,10 @@ struct SymptomIndicator: View {
 struct Dot_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            Dot()
+            Dot(level: .present)
             Spike().previewDisplayName("Spike")
             RotatedSpike(angle: Angle(degrees: 15)).previewDisplayName("Rotated")
-            SymptomIndicator(level: 4).previewDisplayName("Indicator")
+            SymptomIndicator(level: .severe).previewDisplayName("Indicator")
         }
         
     }

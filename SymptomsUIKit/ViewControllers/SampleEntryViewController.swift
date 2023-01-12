@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 /// A view controller that accepts a symptom severity sample from the user.
 class SampleEntryViewController: UIViewController {
@@ -17,6 +18,8 @@ class SampleEntryViewController: UIViewController {
     }
     
     private let dateBarView = DateBarView()
+    
+    private var indicatorView = UIHostingController(rootView: SymptomIndicator(level: .severe))
 
     private let pagerView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -48,6 +51,10 @@ class SampleEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+    
+    private func addSymptomIndicatorView() {
+        
     }
     
     func setupView() {

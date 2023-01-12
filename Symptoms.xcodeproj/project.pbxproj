@@ -11,6 +11,9 @@
 		071BA7632963F2FA00F59BC0 /* SymptomRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BA7622963F2FA00F59BC0 /* SymptomRow.swift */; };
 		071BA7652963F85E00F59BC0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BA7642963F85E00F59BC0 /* ViewModel.swift */; };
 		071BA767296516AF00F59BC0 /* Previewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BA766296516AF00F59BC0 /* Previewable.swift */; };
+		07208435296FAC690063CFED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07208434296FAC690063CFED /* Localizable.strings */; };
+		07208436296FAC690063CFED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07208434296FAC690063CFED /* Localizable.strings */; };
+		07208437296FAC690063CFED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07208434296FAC690063CFED /* Localizable.strings */; };
 		07299622296676390072BBF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07299621296676390072BBF7 /* AppDelegate.swift */; };
 		07299624296676390072BBF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07299623296676390072BBF7 /* SceneDelegate.swift */; };
 		0729962B2966763B0072BBF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0729962A2966763B0072BBF7 /* Assets.xcassets */; };
@@ -38,8 +41,6 @@
 		07A9D5A829666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D5A729666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift */; };
 		07A9D5AB29666D5900E5B03F /* SymptomsWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07A9D58829666D5500E5B03F /* SymptomsWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07A9D5B629666DB400E5B03F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D58029664EF000E5B03F /* TestView.swift */; };
-		07B16B3C296E7C110091E9B3 /* SymptomIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B16B3B296E7C110091E9B3 /* SymptomIndicatorView.swift */; };
-		07B16B3E296E7C770091E9B3 /* SymptomIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B16B3D296E7C770091E9B3 /* SymptomIndicatorViewController.swift */; };
 		07B16B41296E7DA50091E9B3 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B16B40296E7DA50091E9B3 /* Dot.swift */; };
 		07DDF830296E30D000E82765 /* TrackedSymptomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DDF82F296E30D000E82765 /* TrackedSymptomViewModel.swift */; };
 		07E9E891295FF8AD00029E2B /* SymptomsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9E890295FF8AD00029E2B /* SymptomsApp.swift */; };
@@ -52,6 +53,7 @@
 		07E9E91F296270F900029E2B /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E91E296270F900029E2B /* CocoaLumberjack */; };
 		07E9E921296270F900029E2B /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E920296270F900029E2B /* CocoaLumberjackSwift */; };
 		07E9E925296276DA00029E2B /* HealthStore in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9E924296276DA00029E2B /* HealthStore */; };
+		07F34ABC296FAF750003AF89 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B16B40296E7DA50091E9B3 /* Dot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		071BA7622963F2FA00F59BC0 /* SymptomRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomRow.swift; sourceTree = "<group>"; };
 		071BA7642963F85E00F59BC0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		071BA766296516AF00F59BC0 /* Previewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewable.swift; sourceTree = "<group>"; };
+		07208434296FAC690063CFED /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		07208438296FAC980063CFED /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0729961F296676390072BBF7 /* SymptomsUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymptomsUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07299621296676390072BBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07299623296676390072BBF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,8 +160,6 @@
 		07A9D5A529666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		07A9D5A729666D5900E5B03F /* SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsWatchApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		07B16B3A296E77F30091E9B3 /* SymptomsUIKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SymptomsUIKit.entitlements; sourceTree = "<group>"; };
-		07B16B3B296E7C110091E9B3 /* SymptomIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomIndicatorView.swift; sourceTree = "<group>"; };
-		07B16B3D296E7C770091E9B3 /* SymptomIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomIndicatorViewController.swift; sourceTree = "<group>"; };
 		07B16B40296E7DA50091E9B3 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		07DDF82F296E30D000E82765 /* TrackedSymptomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedSymptomViewModel.swift; sourceTree = "<group>"; };
 		07E9E88D295FF8AD00029E2B /* Symptoms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symptoms.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -320,8 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				072996572967A9570072BBF7 /* DateBarView.swift */,
-				07B16B3B296E7C110091E9B3 /* SymptomIndicatorView.swift */,
-				07B16B3D296E7C770091E9B3 /* SymptomIndicatorViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -396,6 +396,7 @@
 		07E9E884295FF8AD00029E2B = {
 			isa = PBXGroup;
 			children = (
+				07208434296FAC690063CFED /* Localizable.strings */,
 				0729965D2967B8070072BBF7 /* README.md */,
 				0736EE652962961900ABDE8F /* HealthStore */,
 				07E9E88F295FF8AD00029E2B /* Symptoms */,
@@ -743,6 +744,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = 07E9E884295FF8AD00029E2B;
 			packageReferences = (
@@ -772,6 +774,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0729962E2966763B0072BBF7 /* LaunchScreen.storyboard in Resources */,
+				07208435296FAC690063CFED /* Localizable.strings in Resources */,
 				0729962B2966763B0072BBF7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,6 +798,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A9D59229666D5700E5B03F /* Preview Assets.xcassets in Resources */,
+				07208437296FAC690063CFED /* Localizable.strings in Resources */,
 				07A9D58F29666D5700E5B03F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -818,6 +822,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E9E899295FF8B100029E2B /* Preview Assets.xcassets in Resources */,
+				07208436296FAC690063CFED /* Localizable.strings in Resources */,
 				07E9E895295FF8B100029E2B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,18 +849,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				072996622967CA510072BBF7 /* Previewable.swift in Sources */,
-				07B16B3C296E7C110091E9B3 /* SymptomIndicatorView.swift in Sources */,
 				07299622296676390072BBF7 /* AppDelegate.swift in Sources */,
 				072996602967CA260072BBF7 /* ViewModel.swift in Sources */,
 				07DDF830296E30D000E82765 /* TrackedSymptomViewModel.swift in Sources */,
 				0729965129667D570072BBF7 /* SymptomListViewController.swift in Sources */,
 				072996612967CA260072BBF7 /* Symptom.swift in Sources */,
 				0729965F2967C69E0072BBF7 /* AddSymptomViewController.swift in Sources */,
-				07B16B3E296E7C770091E9B3 /* SymptomIndicatorViewController.swift in Sources */,
 				0729965429667D710072BBF7 /* RootCoordinator.swift in Sources */,
 				07299624296676390072BBF7 /* SceneDelegate.swift in Sources */,
 				072996582967A9570072BBF7 /* DateBarView.swift in Sources */,
 				07299656296699880072BBF7 /* SampleEntryViewController.swift in Sources */,
+				07F34ABC296FAF750003AF89 /* Dot.swift in Sources */,
 				0729965C2967B2920072BBF7 /* LayoutHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -981,6 +985,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0729962D2966763B0072BBF7 /* Base */,
+				07208438296FAC980063CFED /* nl */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1282,6 +1287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1340,6 +1346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

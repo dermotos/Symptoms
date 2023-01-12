@@ -73,6 +73,7 @@ final class DateBarView: UIView {
     }
     
     private func setupView() {
+        backgroundColor = .systemPink
         addSubview(sampleEntryDatePicker)
         addSubview(previousEntryLabel)
         sampleEntryDatePicker.translatesAutoresizingMaskIntoConstraints = false

@@ -22,10 +22,10 @@ class SampleEntryViewController: UIViewController {
     private let startingIndex: Int
     
     private lazy var indicatorViewControllers = {
+        var index = 0
         let controllers = modelProvider.model.trackedSymptoms.map { item in
-            let controller = UIViewController()
-            let colors: [UIColor] = [.red, .blue, .orange, .green]
-            controller.view.backgroundColor = colors[Int.random(in: 0..<colors.count)]
+            let controller = SymptomIndicatorHostViewController(index: index)
+            index += 1
             return controller
         }
         return controllers

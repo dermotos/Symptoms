@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum SymptomLevel: Int {
+enum Severity: Int {
     case notPresent = 0
     case present
     case mild
@@ -46,14 +46,14 @@ struct Spike: View {
 }
 
 struct Dot: View {
-    var level: SymptomLevel
+    var level: Severity
     
     var color: Color {
         level == .notPresent ? .gray : .red
     }
     
     var sizeStep: CGFloat {
-        let scaleForLevel: [SymptomLevel: CGFloat] =
+        let scaleForLevel: [Severity: CGFloat] =
         [.notPresent: 0.1,
          .present: 0.15,
          .mild: 0.3,
@@ -82,21 +82,21 @@ struct RotatedSpike: View {
 }
 
 struct SymptomIndicator: View {
-    @State var level: SymptomLevel
+    @State var severity: Severity
    // @State var sliderLevel: Double
     
     var sizeStep: CGFloat {
-        let scaleForLevel: [SymptomLevel: CGFloat] =
+        let scaleForSeverity: [Severity: CGFloat] =
         [.notPresent: 0.01,
          .present: 0.01,
          .mild: 0.3,
          .moderate: 0.5,
          .severe: 0.6]
-        return scaleForLevel[level, default: 0.3]
+        return scaleForSeverity[severity, default: 0.3]
     }
     
     func numberOfSpikes() -> Int {
-        switch level {
+        switch severity {
         case .notPresent,
                 .present,
                 .mild:
@@ -121,10 +121,10 @@ struct SymptomIndicator: View {
                     .scaledToFit()
                     .scaleEffect(sizeStep)
                     
-                Dot(level: level)
+                Dot(level: severity)
                     .scaledToFit()
                 }
-            .animation(.spring(), value: level)
+            .animation(.spring(), value: severity)
             
 //            Slider( value: $sliderLevel, in: 0...5) { change in
 //                level = SymptomLevel(rawValue: Int(sliderLevel))!
@@ -138,7 +138,7 @@ struct SymptomIndicator: View {
 struct Dot_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SymptomIndicator(level: .severe).previewDisplayName("Indicator")
+            SymptomIndicator(severity: .severe).previewDisplayName("Indicator")
         }
         
     }

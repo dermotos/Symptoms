@@ -26,6 +26,10 @@ final class RootCoordinator {
     
     var navigationController: UINavigationController?
     
+    var symptomListViewController: SymptomListViewController? {
+        navigationController?.viewControllers.first as? SymptomListViewController
+    }
+    
     init(healthStore: HealthStorable,
          configStore: ConfigurationStorable) {
         self.healthStore = healthStore
@@ -45,7 +49,7 @@ final class RootCoordinator {
     
     private func makeRootNavigationController(containing rootViewController: UIViewController) -> UINavigationController {
         let navigationController = UINavigationController(rootViewController: rootViewController)
-        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.prefersLargeTitles = false
         return navigationController
     }
 }
@@ -61,7 +65,10 @@ extension RootCoordinator: Navigator {
 
         case .sampleEntry(let index):
             navigationController?.presentedViewController?.dismiss(animated: animated)
-            let sampleEntryViewController = SampleEntryViewController(startingIndex: index)
+            guard let modelProvider = symptomListViewController else {
+                return
+            }
+            let sampleEntryViewController = SampleEntryViewController(modelProvider: modelProvider, startingIndex: index)
             navigationController?.pushViewController(sampleEntryViewController, animated: true)
 
         case .addTrackedSymptoms(let model):
@@ -72,7 +79,6 @@ extension RootCoordinator: Navigator {
     }
     
     private func refreshSymptomList() {
-        let symptomListViewController = navigationController?.viewControllers.first as? SymptomListViewController
         symptomListViewController?.refreshTable()
     }
 }

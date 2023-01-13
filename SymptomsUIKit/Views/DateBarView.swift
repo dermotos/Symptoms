@@ -80,8 +80,8 @@ final class DateBarView: UIView {
         previousEntryLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             sampleEntryDatePicker.topAnchor.constraint(equalTo: topAnchor, constant: Constants.spacing),
-            sampleEntryDatePicker.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.spacing),
-            sampleEntryDatePicker.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.spacing),
+            sampleEntryDatePicker.centerXAnchor.constraint(equalTo: centerXAnchor),
+            sampleEntryDatePicker.widthAnchor.constraint(equalTo: widthAnchor, constant: -Constants.spacing * 2),
             
             sampleEntryDatePicker.bottomAnchor.constraint(equalTo: previousEntryLabel.topAnchor, constant: Constants.spacing),
             previousEntryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.spacing),

@@ -8,14 +8,19 @@
 import UIKit
 import HealthStore
 
-class SymptomListViewController: UIViewController {
+protocol TrackedSymptomModelProvider: AnyObject {
+    var model: TrackedSymptomViewModel { get }
+}
+
+class SymptomListViewController: UIViewController, TrackedSymptomModelProvider {
     
     private enum Constants {
         static let cellReuseIdentifier = "cell"
     }
     
     private weak var coordinator: RootCoordinator?
-    private var model: TrackedSymptomViewModel
+    
+    var model: TrackedSymptomViewModel
 
     private var addSymptomBarButton: UIBarButtonItem
     

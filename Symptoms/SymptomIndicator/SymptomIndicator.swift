@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Severity: Int {
+enum Severity: Int, CaseIterable {
     case notPresent = 0
     case present
     case mild
@@ -83,7 +83,25 @@ struct RotatedSpike: View {
 
 struct SymptomIndicator: View {
     @State var severity: Severity
-   // @State var sliderLevel: Double
+    @State var sliderLevel: Double
+    
+    func increment() {
+        guard severity.rawValue < Severity.allCases.count else { return }
+        guard let newValue = Severity(rawValue: severity.rawValue + 1) else {
+            //Log error
+            return
+        }
+        severity = newValue
+    }
+    
+    func decrement() {
+        guard severity.rawValue > 0 else { return }
+        guard let newValue = Severity(rawValue: severity.rawValue - 1) else {
+            //Log error
+            return
+        }
+        severity = newValue
+    }
     
     var sizeStep: CGFloat {
         let scaleForSeverity: [Severity: CGFloat] =
@@ -126,9 +144,9 @@ struct SymptomIndicator: View {
                 }
             .animation(.spring(), value: severity)
             
-//            Slider( value: $sliderLevel, in: 0...5) { change in
-//                level = SymptomLevel(rawValue: Int(sliderLevel))!
-//            }
+            Slider( value: $sliderLevel, in: 0...5) { change in
+                severity = Severity(rawValue: Int(sliderLevel))!
+            }
         }
        
     }
@@ -138,7 +156,7 @@ struct SymptomIndicator: View {
 struct Dot_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SymptomIndicator(severity: .severe).previewDisplayName("Indicator")
+            SymptomIndicator(severity: .severe, sliderLevel: 3).previewDisplayName("Indicator")
         }
         
     }

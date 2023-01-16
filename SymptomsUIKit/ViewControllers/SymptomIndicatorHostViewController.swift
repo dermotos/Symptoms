@@ -15,6 +15,8 @@ class SymptomIndicatorHostViewController: UIHostingController<SymptomIndicator> 
         case upwards
         case downwards
     }
+    
+    private var symptomState = SymptomState()
 
     var symptomIndicatorView: SymptomIndicator
     let index: Int
@@ -27,7 +29,7 @@ class SymptomIndicatorHostViewController: UIHostingController<SymptomIndicator> 
     
     init(index: Int, initialSeverity: Severity = .notPresent) {
         self.index = index
-        symptomIndicatorView = SymptomIndicator(severity: initialSeverity, sliderLevel: 3)
+        symptomIndicatorView = SymptomIndicator(state: symptomState)
         gestureRecognizer = UIPanGestureRecognizer()
         super.init(rootView: symptomIndicatorView)
         gestureRecognizer.addTarget(self, action: #selector(didPan))
@@ -58,8 +60,8 @@ class SymptomIndicatorHostViewController: UIHostingController<SymptomIndicator> 
     
     func updateSymptomView(moving direction: Direction) {
         switch direction {
-        case .upwards: symptomIndicatorView.increment()
-        case .downwards: symptomIndicatorView.decrement()
+        case .upwards: symptomIndicatorView.state.increment()
+        case .downwards: symptomIndicatorView.state.decrement()
         }
     }
     

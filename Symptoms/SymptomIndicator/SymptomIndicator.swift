@@ -68,9 +68,7 @@ struct Dot: View {
             .scaleEffect(sizeStep)
             .animation(.easeInOut, value: level)
         }
-    
 }
-
 
 struct RotatedSpike: View {
     let angle: Angle
@@ -81,9 +79,8 @@ struct RotatedSpike: View {
     }
 }
 
-struct SymptomIndicator: View {
-    @State var severity: Severity
-    @State var sliderLevel: Double
+class SymptomState: ObservableObject {
+    @Published var severity: Severity = .notPresent
     
     func increment() {
         guard severity.rawValue < Severity.allCases.count else { return }
@@ -102,6 +99,13 @@ struct SymptomIndicator: View {
         }
         severity = newValue
     }
+}
+
+struct SymptomIndicator: View {
+    
+    @ObservedObject var state: SymptomState
+    //@State var severity: Severity
+    //@State var sliderLevel: Double
     
     var sizeStep: CGFloat {
         let scaleForSeverity: [Severity: CGFloat] =
@@ -110,11 +114,11 @@ struct SymptomIndicator: View {
          .mild: 0.3,
          .moderate: 0.5,
          .severe: 0.6]
-        return scaleForSeverity[severity, default: 0.3]
+        return scaleForSeverity[state.severity, default: 0.3]
     }
     
     func numberOfSpikes() -> Int {
-        switch severity {
+        switch state.severity {
         case .notPresent,
                 .present,
                 .mild:
@@ -139,14 +143,14 @@ struct SymptomIndicator: View {
                     .scaledToFit()
                     .scaleEffect(sizeStep)
                     
-                Dot(level: severity)
+                Dot(level: state.severity)
                     .scaledToFit()
                 }
-            .animation(.spring(), value: severity)
+            .animation(.spring(), value: state.severity)
             
-            Slider( value: $sliderLevel, in: 0...5) { change in
-                severity = Severity(rawValue: Int(sliderLevel))!
-            }
+//            Slider( value: $sliderLevel, in: 0...5) { change in
+//                state.severity = Severity(rawValue: Int(sliderLevel))!
+//            }
         }
        
     }
@@ -154,9 +158,15 @@ struct SymptomIndicator: View {
 }
 
 struct Dot_Previews: PreviewProvider {
+    static let previewState: SymptomState = {
+        let state = SymptomState()
+        state.severity = .severe
+        return state
+    }()
+    
     static var previews: some View {
         Group {
-            SymptomIndicator(severity: .severe, sliderLevel: 3).previewDisplayName("Indicator")
+            SymptomIndicator(state: previewState).previewDisplayName("Indicator")
         }
         
     }
